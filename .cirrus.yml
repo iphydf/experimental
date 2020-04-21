@@ -17,5 +17,6 @@ cirrus-ci_task:
     - echo 'build --verbose_failures' | tee -a .bazelrc.local
     - echo 'build --config=linux'     | tee -a .bazelrc.local
     - echo 'build --config=clang'     | tee -a .bazelrc.local
+    - echo 'build --config=release'   | tee -a .bazelrc.local
   test_all_script:
-    - bazel test --config=clang --config=release -k //experimental/...
+    - bazel test --remote_http_cache=http://$CIRRUS_HTTP_CACHE_HOST -k //experimental/...
