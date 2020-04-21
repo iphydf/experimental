@@ -1,0 +1,21 @@
+---
+cirrus-ci_task:
+  container:
+    image: l.gcr.io/google/bazel:3.0.0
+    cpu: 2
+    memory: 2G
+  configure_script:
+    - cd ..
+    - mv cirrus-ci-build experimental
+    - git clone --depth=1 --recurse-submodules https://github.com/TokTok/toktok-stack cirrus-ci-build
+    - cd cirrus-ci-build
+    - rm -rf experimental
+    - mv ../experimental .
+    - echo 'build --curses=no'        | tee    .bazelrc.local
+    - echo 'build --jobs=50'          | tee -a .bazelrc.local
+    - echo 'build --show_timestamps'  | tee -a .bazelrc.local
+    - echo 'build --verbose_failures' | tee -a .bazelrc.local
+    - echo 'build --config=linux'     | tee -a .bazelrc.local
+    - echo 'build --config=clang'     | tee -a .bazelrc.local
+  test_all_script:
+    - bazel test --config=clang --config=release -k //experimental/...
