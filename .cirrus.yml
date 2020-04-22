@@ -1,15 +1,11 @@
 ---
 cirrus-ci_task:
   container:
-    dockerfile: Dockerfile.cirrus
+    image: toxchat/toktok-stack:0.0.4
     cpu: 2
     memory: 2G
   configure_script:
-    - cd /src/toktok-stack
-    - for i in $(git submodule foreach --recursive pwd); do (cd $i && git pull) & done
-    - for i in $(git submodule foreach --recursive pwd); do wait; done
-    - rm -rf experimental
-    - mv /tmp/cirrus-ci-build experimental
-    - cd /tmp && mv /src/toktok-stack cirrus-ci-build
+    - cat .bazelrc.local >> /src/toktok-stack/.bazelrc.local
+    - /src/toktok-stack/tools/inject-repo experimental
   test_all_script:
     - bazel test --remote_http_cache=http://$CIRRUS_HTTP_CACHE_HOST -k //experimental/...
