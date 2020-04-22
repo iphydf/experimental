@@ -1,0 +1,53 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+load("//third_party/qt:build_defs.bzl", "qt_moc", "qt_test")
+
+package(default_visibility = ["//experimental:__subpackages__"])
+
+COPTS = select({
+    "//tools/config:freebsd": [],
+    "//tools/config:linux": ["-fPIC"],
+    "//tools/config:osx": [],
+    "//tools/config:windows": [],
+})
+
+# MOC headers
+# =========================================================
+
+qt_moc(
+    name = "moc",
+    srcs = [
+        "core.h",
+    ],
+    deps = ["@qt//:qt_core"],
+)
+
+# Main library
+# =========================================================
+
+cc_library(
+    name = "qt-toxcore-c",
+    srcs = [
+        "core.cpp",
+        ":moc",
+    ],
+    hdrs = [
+        "core.h",
+    ],
+    copts = COPTS,
+    includes = ["."],
+    deps = [
+        "//c-toxcore",
+        "@qt//:qt_core",
+    ],
+)
+
+# Tests
+# =========================================================
+
+qt_test(
+    name = "core_test",
+    size = "small",
+    src = "test/core_test.cpp",
+    copts = COPTS,
+    deps = [":qt-toxcore-c"],
+)
