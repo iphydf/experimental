@@ -1,5 +1,0 @@
-# Bazel config for Cirrus CI.
-build --curses=no
-build --jobs=50
-build --show_timestamps
-build --verbose_failures

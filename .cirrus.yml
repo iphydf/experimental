@@ -1,11 +1,10 @@
 ---
 cirrus-ci_task:
   container:
-    image: toxchat/toktok-stack:0.0.4
+    image: toxchat/toktok-stack:0.0.6
     cpu: 2
     memory: 2G
   configure_script:
-    - cat .bazelrc.local >> /src/toktok-stack/.bazelrc.local
-    - /src/toktok-stack/tools/inject-repo experimental
+    - /src/workspace/tools/inject-repo experimental
   test_all_script:
-    - bazel test --remote_http_cache=http://$CIRRUS_HTTP_CACHE_HOST -k //experimental/...
+    - bazel test --config=ci --remote_http_cache=http://$CIRRUS_HTTP_CACHE_HOST -k //experimental/...
