@@ -4,7 +4,7 @@ repository:
   name: experimental
 
   # A short description of the repository that will show up on GitHub
-  description: description of repo
+  description: Experimental - Anyone can submit anything in here
 
   # A URL with more information about the repository
   homepage: https://toktok.ltd/
@@ -42,3 +42,8 @@ repository:
   # Either `true` to allow rebase-merging pull requests, or `false` to prevent
   # rebase-merging.
   allow_rebase_merge: true
+
+labels:
+  - name: "CAT:bug"
+    color: "#ee0701"
+    description: Behaviour implemented is not as specified
