@@ -10,6 +10,8 @@ repository:
 branches:
   - name: "master"
     protection:
+      # No code reviews required in experimental.
+      required_pull_request_reviews: null
       required_status_checks:
         contexts:
           - AccessLint
