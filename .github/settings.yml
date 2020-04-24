@@ -1,105 +1,13 @@
 ---
+_extends: template
+
 repository:
-  # The name of the repository. Changing this will rename the repository
   name: experimental
-
-  # A short description of the repository that will show up on GitHub
   description: Experimental - Anyone can submit anything in here
-
-  # A URL with more information about the repository
-  homepage: https://toktok.ltd/
-
-  # A comma-separated list of topics to set on the repository
-  topics: toxcore
-
-  # Either `true` to make the repository private, or `false` to make it public.
-  private: false
-
-  # Either `true` to enable issues for this repository, `false` to disable them.
-  has_issues: false
-
-  # Either `true` to enable projects for this repository, or `false` to disable them.
-  # If projects are disabled for the organization, passing `true` will cause an API error.
-  has_projects: false
-
-  # Either `true` to enable the wiki for this repository, `false` to disable it.
   has_wiki: true
-
-  # Either `true` to enable downloads for this repository, `false` to disable them.
-  has_downloads: false
-
-  # Updates the default branch for this repository.
-  default_branch: master
-
-  # Either `true` to allow squash-merging pull requests, or `false` to prevent
-  # squash-merging.
-  allow_squash_merge: true
-
-  # Either `true` to allow merging pull requests with a merge commit, or `false`
-  # to prevent merging pull requests with merge commits.
   allow_merge_commit: true
 
-  # Either `true` to allow rebase-merging pull requests, or `false` to prevent
-  # rebase-merging.
-  allow_rebase_merge: true
-
 labels:
-  - name: "CAT:api-break"
-    color: "#d96f0b"
-    description: "Change breaks API or ABI"
-
-  - name: "CAT:bug"
-    color: "#ee0701"
-    description: "Behaviour implemented is not as specified"
-
-  - name: "CAT:code-cleanup"
-    color: "#fef2c0"
-    description: "Internal code cleanup, not affecting semantics"
-
-  - name: "CAT:coverage"
-    color: "#0e8a16"
-    description: "Code coverage related"
-
-  - name: "CAT:documentation"
-    color: "#1d76db"
-    description: "Documentation"
-
-  - name: "CAT:enhancement"
-    color: "#84b6eb"
-    description: "Feature requests and implementation"
-
-  - name: "CAT:meta"
-    color: "#256784"
-    description: "Process related"
-
-  - name: "CAT:overhead"
-    color: "#f9d0c4"
-    description: "Chores"
-
-  - name: "CAT:packaging"
-    color: "#1d76db"
-    description: "Packaging"
-
-  - name: "CAT:proposal"
-    color: "#8effa5"
-    description: "Proposals"
-
-  - name: "CAT:question"
-    color: "#cc317c"
-    description: "Questions"
-
-  - name: "CAT:security"
-    color: "#d93f0b"
-    description: "Security"
-
-  - name: "CAT:suggestion"
-    color: "#d93f0b"
-    description: "Suggestions"
-
-  - name: "good first issue"
-    color: "#7057ff"
-    description: "Good first issue"
-
   - name: "MOD:bootstrap"
     color: "#01707f"
     description: "Bootstrap"
@@ -123,35 +31,3 @@ labels:
   - name: "MOD:toxav"
     color: "#0052cc"
     description: "Audio/video"
-
-  - name: "P0"
-    color: "#d93f0b"
-    description: "Critical priority"
-
-  - name: "P1"
-    color: "#eb6420"
-    description: "High priority"
-
-  - name: "P2"
-    color: "#ffcccc"
-    description: "Medium priority"
-
-  - name: "P3"
-    color: "#eeeeee"
-    description: "Low priority"
-
-  - name: "STA:duplicate"
-    color: "#cccccc"
-    description: "Duplicate"
-
-  - name: "STA:help-wanted"
-    color: "#128a0c"
-    description: "Help wanted"
-
-  - name: "STA:no-repro"
-    color: "#e6e6e6"
-    description: "Won't Fix (Not reproducible)"
-
-  - name: "STA:working-as-intended"
-    color: "#ffffff"
-    description: "Won't Fix (Intended behaviour)"
