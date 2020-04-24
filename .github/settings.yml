@@ -20,26 +20,26 @@ branches:
 
 # Labels specific to this repository.
 labels:
-  - name: "MOD:bootstrap"
+  - name: "bootstrap"
     color: "#01707f"
     description: "Bootstrap"
 
-  - name: "MOD:crypto"
+  - name: "crypto"
     color: "#1d76db"
     description: "Crypto"
 
-  - name: "MOD:file-transfers"
+  - name: "file transfers"
     color: "#e02abf"
     description: "File Transfers"
 
-  - name: "MOD:messenger"
+  - name: "messenger"
     color: "#d93f0b"
     description: "Messenger"
 
-  - name: "MOD:network"
+  - name: "network"
     color: "#d4c5f9"
     description: "Network"
 
-  - name: "MOD:toxav"
+  - name: "toxav"
     color: "#0052cc"
     description: "Audio/video"
