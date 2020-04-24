@@ -44,6 +44,114 @@ repository:
   allow_rebase_merge: true
 
 labels:
+  - name: "CAT:api-break"
+    color: "#d96f0b"
+    description: "Change breaks API or ABI"
+
   - name: "CAT:bug"
     color: "#ee0701"
-    description: Behaviour implemented is not as specified
+    description: "Behaviour implemented is not as specified"
+
+  - name: "CAT:code-cleanup"
+    color: "#fef2c0"
+    description: "Internal code cleanup, not affecting semantics"
+
+  - name: "CAT:coverage"
+    color: "#0e8a16"
+    description: "Code coverage related"
+
+  - name: "CAT:documentation"
+    color: "#1d76db"
+    description: "Documentation"
+
+  - name: "CAT:enhancement"
+    color: "#84b6eb"
+    description: "Feature requests and implementation"
+
+  - name: "CAT:meta"
+    color: "#256784"
+    description: "Process related"
+
+  - name: "CAT:overhead"
+    color: "#f9d0c4"
+    description: "Chores"
+
+  - name: "CAT:packaging"
+    color: "#1d76db"
+    description: "Packaging"
+
+  - name: "CAT:proposal"
+    color: "#8effa5"
+    description: "Proposals"
+
+  - name: "CAT:question"
+    color: "#cc317c"
+    description: "Questions"
+
+  - name: "CAT:security"
+    color: "#d93f0b"
+    description: "Security"
+
+  - name: "CAT:suggestion"
+    color: "#d93f0b"
+    description: "Suggestions"
+
+  - name: "good first issue"
+    color: "#7057ff"
+    description: "Good first issue"
+
+  - name: "MOD:bootstrap"
+    color: "#01707f"
+    description: "Bootstrap"
+
+  - name: "MOD:crypto"
+    color: "#1d76db"
+    description: "Crypto"
+
+  - name: "MOD:file-transfers"
+    color: "#e02abf"
+    description: "File Transfers"
+
+  - name: "MOD:messenger"
+    color: "#d93f0b"
+    description: "Messenger"
+
+  - name: "MOD:network"
+    color: "#d4c5f9"
+    description: "Network"
+
+  - name: "MOD:toxav"
+    color: "#0052cc"
+    description: "Audio/video"
+
+  - name: "P0"
+    color: "#d93f0b"
+    description: "Critical priority"
+
+  - name: "P1"
+    color: "#eb6420"
+    description: "High priority"
+
+  - name: "P2"
+    color: "#ffcccc"
+    description: "Medium priority"
+
+  - name: "P3"
+    color: "#eeeeee"
+    description: "Low priority"
+
+  - name: "STA:duplicate"
+    color: "#cccccc"
+    description: "Duplicate"
+
+  - name: "STA:help-wanted"
+    color: "#128a0c"
+    description: "Help wanted"
+
+  - name: "STA:no-repro"
+    color: "#e6e6e6"
+    description: "Won't Fix (Not reproducible)"
+
+  - name: "STA:working-as-intended"
+    color: "#ffffff"
+    description: "Won't Fix (Intended behaviour)"
