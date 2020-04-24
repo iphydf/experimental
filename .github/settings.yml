@@ -12,7 +12,10 @@ branches:
     protection:
       required_status_checks:
         contexts:
+          - AccessLint
+          - WIP
           - cirrus-ci
+          - license/cla
 
 # Labels specific to this repository.
 labels:
