@@ -8,7 +8,7 @@ tag-template: "v$NEXT_PATCH_VERSION"
 change-template: "- $TITLE @$AUTHOR (#$NUMBER)"
 
 categories:
-  - title: "❗ API Breaks"
+  - title: "❗ Breaking changes"
     labels:
       - api break
   - title: "🚀 Features"
