@@ -1,0 +1,15 @@
+---
+restylers:
+  - clang-format:
+      arguments: ["-style={BasedOnStyle: Google, ColumnLimit: 100}"]
+      include:
+        - "**/*.cc"
+        - "**/*.cpp"
+        - "**/*.h"
+  - prettier-markdown
+  - prettier-yaml
+  - reorder-python-imports
+  - shellharden
+  - shfmt
+  - yapf
+  - whitespace

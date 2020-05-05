@@ -16,9 +16,7 @@ struct Core::Data {
   std::unique_ptr<Tox, ToxDeleter> tox;
 };
 
-Core::Core() : data_(std::make_unique<Data>()) {
-  data_->tox.reset(tox_new(nullptr, nullptr));
-}
+Core::Core() : data_(std::make_unique<Data>()) { data_->tox.reset(tox_new(nullptr, nullptr)); }
 
 Core::~Core() {}
 

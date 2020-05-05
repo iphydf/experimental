@@ -38,16 +38,15 @@
 **
 ****************************************************************************/
 
-#include "camera.h"
-
 #include <QtWidgets>
 
-int main(int argc, char *argv[])
-{
-    QApplication app(argc, argv);
+#include "camera.h"
 
-    Camera camera;
-    camera.show();
+int main(int argc, char *argv[]) {
+  QApplication app(argc, argv);
 
-    return app.exec();
+  Camera camera;
+  camera.show();
+
+  return app.exec();
 };
