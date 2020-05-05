@@ -1,6 +1,6 @@
 ---
 replacers:
-  - search: "/- (feat|fix|docs|chore|cleanup|style|refactor|perf|test)(\\(\\w+\\))?: /"
+  - search: "/- (feat|fix|docs|chore|cleanup|style|refactor|perf|test)(\\(\\w+\\))?: /g"
     replace: "- "
 
 name-template: "v$NEXT_PATCH_VERSION 🌈"
