@@ -1,7 +1,7 @@
 ---
 replacers:
-  - search: "/(feat|fix|docs|chore|cleanup|style|refactor|perf|test)(\(\w+\))?: /g"
-    replace: ""
+  - search: "/- (feat|fix|docs|chore|cleanup|style|refactor|perf|test)(\\(\\w+\\))?: /"
+    replace: "- "
 
 name-template: "v$NEXT_PATCH_VERSION 🌈"
 tag-template: "v$NEXT_PATCH_VERSION"
