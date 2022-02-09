@@ -1,0 +1,19 @@
+---
+name: automerge
+
+on:
+  check_suite:
+    types:
+      - completed
+
+jobs:
+  automerge:
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: automerge
+        run: |
+          git remote add upstream https://github.com/TokTok/experimental
+          git push upstream HEAD:master

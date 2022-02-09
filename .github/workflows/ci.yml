@@ -1,0 +1,13 @@
+---
+name: ci
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  docker-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Do nothing
+        run: echo "Everything is OK!"
