@@ -2,9 +2,7 @@
 name: automerge
 
 on:
-  status:
-    types:
-      - completed
+  status
 
 jobs:
   automerge:
@@ -16,4 +14,5 @@ jobs:
       - name: automerge
         run: |
           git remote add upstream https://github.com/TokTok/experimental
+          echo git push upstream $GITHUB_REF:master
           git push upstream $GITHUB_REF:master
