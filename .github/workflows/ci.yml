@@ -6,7 +6,7 @@ on:
     branches: [master]
 
 jobs:
-  docker-test:
+  empty-test:
     runs-on: ubuntu-latest
     steps:
       - name: Do nothing
