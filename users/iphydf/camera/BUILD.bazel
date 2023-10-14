@@ -54,10 +54,11 @@ cc_library(
     }),
     includes = ["."],
     deps = [
+        "@gl",
         "@qt//:qt_core",
         "@qt//:qt_gui",
         "@qt//:qt_multimedia",
-        "@qt//:qt_multimedia_widgets",
+        "@qt//:qt_multimediawidgets",
         "@qt//:qt_widgets",
     ],
 )
