@@ -53,6 +53,7 @@ cc_library(
         "//tools/config:windows": [],
     }),
     includes = ["."],
+    tags = ["no-cross"],
     deps = [
         "@gl",
         "@qt//:qt_core",
@@ -65,5 +66,6 @@ cc_library(
 
 cc_binary(
     name = "camera",
+    tags = ["no-cross"],
     deps = [":camera_main"],
 )

@@ -8,5 +8,4 @@ cirrus-ci_task:
     - /src/workspace/tools/inject-repo experimental
   test_all_script:
     - cd /src/workspace && bazel test -k
-        --config=ci
         //experimental/...
