@@ -13,6 +13,7 @@ qt_moc(
         "imagesettings.h",
         "videosettings.h",
     ],
+    tags = ["no-cross"],
     deps = ["@qt//:qt_widgets"],
 )
 
@@ -26,6 +27,7 @@ qt_uic(
         "imagesettings.ui",
         "videosettings.ui",
     ],
+    tags = ["no-cross"],
 )
 
 # Main binary
