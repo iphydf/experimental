@@ -5,9 +5,22 @@ on:
   pull_request:
     branches: [master]
 
+# Cancel old PR builds when pushing new commits.
+concurrency:
+  group: build-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
-  empty-test:
+  wireguard-vpn:
     runs-on: ubuntu-latest
     steps:
-      - name: Do nothing
-        run: echo "Everything is OK!"
+      - run: |
+          sudo apt install wireguard
+          echo "UGdw/CjBpnKF/xJ3/orlUty29kYi1NMnXdXVYExFFH8=" > privatekey
+          sudo ip link add dev wg0 type wireguard
+          sudo ip address add dev wg0 10.100.0.2 peer 10.100.0.1
+          sudo wg set wg0 listen-port 48123 private-key privatekey peer Tb1SOeotVZa6FbEmRq1x4Wo62PxjrjLeHbRYp4kTH2A= allowed-ips 10.100.0.0/24 endpoint code.tox.chat:51820
+          sudo ip link set up dev wg0
+          #ping 10.100.0.1
+          sudo ifconfig wg0
+          sudo wg show
