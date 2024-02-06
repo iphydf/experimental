@@ -14,7 +14,7 @@ class Core : QObject {
 
  public:
   Core();
-  ~Core();
+  ~Core() override;
 
   void hello();
 

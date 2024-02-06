@@ -58,9 +58,9 @@ Q_DECLARE_METATYPE(QCameraInfo)
 Camera::Camera(QWidget *parent)
     : QMainWindow(parent),
       ui(new Ui::Camera),
-      camera(0),
-      imageCapture(0),
-      mediaRecorder(0),
+      camera(nullptr),
+      imageCapture(nullptr),
+      mediaRecorder(nullptr),
       isCapturingImage(false),
       applicationExiting(false) {
   ui->setupUi(this);
@@ -180,7 +180,6 @@ void Camera::updateRecordTime() {
 }
 
 void Camera::processCapturedImage(int requestId, const QImage &img) {
-  Q_UNUSED(requestId);
   QImage scaledImage =
       img.scaled(ui->viewfinder->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation);
 
@@ -285,8 +284,6 @@ void Camera::takeImage() {
 
 void Camera::displayCaptureError(int id, const QCameraImageCapture::Error error,
                                  const QString &errorString) {
-  Q_UNUSED(id);
-  Q_UNUSED(error);
   QMessageBox::warning(this, tr("Image Capture Error"), errorString);
   isCapturingImage = false;
 }
@@ -363,9 +360,6 @@ void Camera::displayCapturedImage() { ui->stackedWidget->setCurrentIndex(1); }
 void Camera::readyForCapture(bool ready) { ui->takeImageButton->setEnabled(ready); }
 
 void Camera::imageSaved(int id, const QString &fileName) {
-  Q_UNUSED(id);
-  Q_UNUSED(fileName);
-
   isCapturingImage = false;
   if (applicationExiting) close();
 }

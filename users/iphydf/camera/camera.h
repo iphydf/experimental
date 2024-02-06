@@ -56,8 +56,8 @@ class Camera : public QMainWindow {
   Q_OBJECT
 
  public:
-  Camera(QWidget *parent = 0);
-  ~Camera();
+  Camera(QWidget *parent = nullptr);
+  ~Camera() override;
 
  private slots:
   void setCamera(const QCameraInfo &cameraInfo);
@@ -100,9 +100,9 @@ class Camera : public QMainWindow {
   void imageSaved(int id, const QString &fileName);
 
  protected:
-  void keyPressEvent(QKeyEvent *event);
-  void keyReleaseEvent(QKeyEvent *event);
-  void closeEvent(QCloseEvent *event);
+  void keyPressEvent(QKeyEvent *event) override;
+  void keyReleaseEvent(QKeyEvent *event) override;
+  void closeEvent(QCloseEvent *event) override;
 
  private:
   Ui::Camera *ui;

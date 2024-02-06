@@ -57,8 +57,8 @@ class VideoSettings : public QDialog {
   Q_OBJECT
 
  public:
-  VideoSettings(QMediaRecorder *mediaRecorder, QWidget *parent = 0);
-  ~VideoSettings();
+  VideoSettings(QMediaRecorder *mediaRecorder, QWidget *parent = nullptr);
+  ~VideoSettings() override;
 
   QAudioEncoderSettings audioSettings() const;
   void setAudioSettings(const QAudioEncoderSettings &);
@@ -70,14 +70,14 @@ class VideoSettings : public QDialog {
   void setFormat(const QString &format);
 
  protected:
-  void changeEvent(QEvent *e);
+  void changeEvent(QEvent *e) override;
 
  private:
   QVariant boxValue(const QComboBox *) const;
   void selectComboBoxItem(QComboBox *box, const QVariant &value);
 
-  Ui::VideoSettingsUi *ui;
-  QMediaRecorder *mediaRecorder;
+  Ui::VideoSettingsUi *ui_;
+  QMediaRecorder *mediaRecorder_;
 };
 
 #endif  // VIDEOSETTINGS_H
