@@ -10,5 +10,5 @@ on:
     types: [opened, reopened, synchronize]
 
 jobs:
-  draft:
+  release:
     uses: iphydf/ci-tools/.github/workflows/release-drafter.yml@release-drafter
