@@ -1,5 +1,5 @@
 ---
-cirrus-ci_task:
+bazel-opt_task:
   container:
     image: toxchat/toktok-stack:latest-release
     cpu: 2
@@ -8,4 +8,5 @@ cirrus-ci_task:
     - /src/workspace/tools/inject-repo experimental
   test_all_script:
     - cd /src/workspace && bazel test -k
+        --remote_cache=http://$CIRRUS_HTTP_CACHE_HOST
         //experimental/...
