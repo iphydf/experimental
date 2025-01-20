@@ -35,7 +35,10 @@ cc_library(
     ],
     copts = COPTS,
     includes = ["."],
-    tags = ["no-cross"],
+    tags = [
+        "no-cross",
+        "qt",
+    ],
     deps = [
         "//c-toxcore",
         "@qt//:qt_core",
