@@ -19,7 +19,12 @@ jobs:
     steps:
       - name: Checkout tree
         uses: actions/checkout@v4
-      - name: Build pages
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Copy build script from master
+        if: github.event_name == 'pull_request_target'
+        run: curl -L "https://raw.githubusercontent.com/${{ github.repository }}/master/.netlify/build.sh" >.netlify/build.sh
+      - name: Build site
         run: .netlify/build.sh
       - name: Install Netlify CLI
         run: npm install -g netlify-cli
@@ -31,7 +36,7 @@ jobs:
           else
             netlify deploy --dir=_site --alias="deploy-preview-${{ github.event.number }}" | tee deploy.log
           fi
-          echo "page_url=$(grep 'Website URL:' netlify.log | grep -o 'https://[^ ]*')" >>$GITHUB_ENV
+          echo "page_url=$(grep 'Website URL:' deploy.log | grep -o 'https://[^ ]*')" >>$GITHUB_ENV
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       - name: Write preview URL to PR
