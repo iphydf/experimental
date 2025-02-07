@@ -51,7 +51,7 @@ jobs:
         uses: thollander/actions-comment-pull-request@v3
         with:
           message: |
-            > [!NOTE]
+            > [!TIP]
             > Preview URL: ${{ steps.deployment.outputs.page_url }}
           comment-tag: preview
       - name: Write warning comment if build failed
