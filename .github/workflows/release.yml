@@ -36,7 +36,7 @@ jobs:
           else
             netlify deploy --dir=_site --alias="deploy-preview-${{ github.event.number }}" | tee deploy.log
           fi
-          echo "page_url=$(grep 'Website URL:' deploy.log | grep -o 'https://[^ ]*')" >>$GITHUB_ENV
+          echo "page_url=$(grep -E 'Website (draft )?URL:' deploy.log | grep -o 'https://[^ ]*')" >>$GITHUB_ENV
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       - name: Write preview URL to PR
