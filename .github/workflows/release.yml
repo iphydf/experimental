@@ -10,3 +10,34 @@ on:
 jobs:
   release:
     uses: TokTok/ci-tools/.github/workflows/release-drafter.yml@master
+
+  deploy-netlify:
+    runs-on: ubuntu-24.04
+    environment:
+      name: netlify
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout tree
+        uses: actions/checkout@v4
+      - name: Build pages
+        run: .netlify/build.sh
+      - name: Install Netlify CLI
+        run: npm install -g netlify-cli
+      - name: Deploy to Netlify
+        id: deployment
+        run: |
+          if ${{ github.event_name == 'push' }}; then
+            netlify deploy --dir=_site --prod | tee deploy.log
+          else
+            netlify deploy --dir=_site --alias="deploy-preview-${{ github.event.number }}" | tee deploy.log
+          fi
+          echo "page_url=$(grep 'Website URL:' netlify.log | grep -o 'https://[^ ]*')" >>$GITHUB_ENV
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      - name: Write preview URL to PR
+        if: github.event_name == 'pull_request_target'
+        uses: thollander/actions-comment-pull-request@v3
+        with:
+          message: |
+            :note: Preview URL: ${{ steps.deployment.outputs.page_url }}
+          comment-tag: preview
