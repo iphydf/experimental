@@ -12,6 +12,6 @@ jobs:
     uses: TokTok/ci-tools/.github/workflows/release-drafter.yml@master
 
   netlify:
-    uses: iphydf/ci-tools/.github/workflows/netlify.yml@netlify
+    uses: TokTok/ci-tools/.github/workflows/netlify.yml@master
     secrets:
       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
