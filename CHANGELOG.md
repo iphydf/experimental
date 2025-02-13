@@ -1,3 +1,26 @@
+<a name="v0.1.1"></a>
+
+## v0.1.1 (2025-02-13)
+
+Latest test release.
+
+#### Features
+
+- Add another sentence to the hello world. ([3d95b487](https://github.com/TokTok/experimental/commit/3d95b487d32b556c709c2e7e37987ae1cb3410e6))
+- Make a comment both at the start and at the end of build. ([9b1f235e](https://github.com/TokTok/experimental/commit/9b1f235ec8510a58a28c4e1cf94400d394f3906e))
+- Build netlify previews on github actions. ([d6adc3d5](https://github.com/TokTok/experimental/commit/d6adc3d5abedbef41c1e4bed248d6ef7810daf8a))
+- Add the 2 other default workflows. ([df5e6a56](https://github.com/TokTok/experimental/commit/df5e6a5693c93bddd76c404916f5e0bac362aee4))
+
+#### Bug Fixes
+
+- Secrets correct. ([e5737e44](https://github.com/TokTok/experimental/commit/e5737e44bd1a9e56cb719ec3a38ff4f319a0574e))
+- Pass auth token to netlify workflow. ([0341c2c4](https://github.com/TokTok/experimental/commit/0341c2c4f256f00d60fdcdc27efe16374d8f3ba2))
+- Use Docker for security in building the web deploy. ([a0428100](https://github.com/TokTok/experimental/commit/a0428100d8890f23f3cb3435bb5cb989f56d35a3))
+- Even better note format. ([872d127b](https://github.com/TokTok/experimental/commit/872d127b125a404976e8c5c7d04473ea53f3f32e))
+- Grep out the correct URL from preview deploys. ([3d1775e0](https://github.com/TokTok/experimental/commit/3d1775e03e1e3b4a7867bdd0b96bdbd48c827256))
+- Use correct note format in comment. ([ea4f1db0](https://github.com/TokTok/experimental/commit/ea4f1db074f75a8f54182bf3ee9097d65f5f268e))
+- Netlify build script needs to be executable. ([aa9a52c5](https://github.com/TokTok/experimental/commit/aa9a52c527be9db84cf50d727e851eae739e1562))
+
 <a name="v0.1.0"></a>
 
 ## v0.1.0 (2024-02-06)
