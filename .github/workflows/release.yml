@@ -1,7 +1,8 @@
 name: release
 
 on:
-  workflow_dispatch:
+  issues:
+    types: [opened, assigned]
 
 # Cancel old builds when pushing new commits.
 concurrency:
