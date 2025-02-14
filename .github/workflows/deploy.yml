@@ -24,6 +24,10 @@ jobs:
     name: Prepare
     uses: iphydf/ci-tools/.github/workflows/deploy-prepare.yml@multi-artifact
 
+  #############################################################
+  # Deploy jobs
+  #############################################################
+
   hello:
     name: Hello
     uses: iphydf/ci-tools/.github/workflows/deploy-artifact.yml@multi-artifact
