@@ -1,11 +1,18 @@
-<a name="v0.1.3-rc.1"></a>
+<a name="v0.1.3"></a>
 
-## v0.1.3-rc.1 (2025-02-14)
+## v0.1.3 (2025-02-14)
 
 ### Release notes
 
-Some release notes here.
+Here comes the release.
 
+#### Bug Fixes
+
+- Use dropdown instead of checkbox for release type. ([1e8e7714](https://github.com/TokTok/experimental/commit/1e8e7714394fe492776f00ff876fdd8f9b9c2d98))
+
+<a name="v0.1.3-rc.1"></a>
+
+## v0.1.3-rc.1 (2025-02-14)
 <a name="v0.1.2"></a>
 
 ## v0.1.2 (2025-02-14)
@@ -22,8 +29,6 @@ Some release notes here.
 <a name="v0.1.1"></a>
 
 ## v0.1.1 (2025-02-13)
-
-Latest test release.
 
 #### Features
 
@@ -45,8 +50,6 @@ Latest test release.
 <a name="v0.1.0"></a>
 
 ## v0.1.0 (2024-02-06)
-
-Hello world.
 
 #### Bug Fixes
 
