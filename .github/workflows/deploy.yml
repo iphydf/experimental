@@ -33,9 +33,9 @@ jobs:
     uses: iphydf/ci-tools/.github/workflows/deploy-artifact.yml@multi-artifact
     with:
       project-name: Experimental
-      artifact-source: hello-{world,you}.txt
-      artifact: hello-$VERSION-{world,you}.txt
+      artifact-source: h*llo-{world,welt}.t*t
+      artifact: h*llo-$VERSION-{world,welt}.t*t
       build: hello
       run: |
         echo "Hello, world from $GITHUB_SHA on $(date)!" >hello-world.txt
-        echo "Hello, you from $GITHUB_SHA on $(date)!" >hello-you.txt
+        echo "Hallo, Welt von $GITHUB_SHA am $(date)!" >hallo-welt.txt
