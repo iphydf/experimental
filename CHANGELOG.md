@@ -1,3 +1,16 @@
+<a name="v0.1.2"></a>
+
+## v0.1.2 (2025-02-14)
+
+### Release notes
+
+Some release notes here.
+
+#### Features
+
+- Add release workflow. ([4c9d7171](https://github.com/TokTok/experimental/commit/4c9d71719ebe21b93a37e836427cdeb6814c8f11))
+- Add a "binary" (actually text) deploy workflow. ([382dda7d](https://github.com/TokTok/experimental/commit/382dda7d928cb8feb8100eb11eaa71258a3a7358))
+
 <a name="v0.1.1"></a>
 
 ## v0.1.1 (2025-02-13)
