@@ -34,7 +34,7 @@ jobs:
     with:
       project-name: Experimental
       artifact-source: h*llo-{world,welt}.t*t
-      artifact: h*llo-$VERSION-{world,welt}.t*t
+      artifact-versioned: h*llo-$VERSION-{world,welt}.t*t
       build: hello
       run: |
         echo "Hello, world from $GITHUB_SHA on $(date)!" >hello-world.txt
