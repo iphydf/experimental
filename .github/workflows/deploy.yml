@@ -22,14 +22,16 @@ jobs:
 
   prepare:
     name: Prepare
-    uses: iphydf/ci-tools/.github/workflows/deploy-prepare.yml@deploy-wf
+    uses: iphydf/ci-tools/.github/workflows/deploy-prepare.yml@multi-artifact
 
   hello:
     name: Hello
-    uses: iphydf/ci-tools/.github/workflows/deploy-artifact.yml@deploy-wf
+    uses: iphydf/ci-tools/.github/workflows/deploy-artifact.yml@multi-artifact
     with:
       project-name: Experimental
-      artifact-source: hello.txt
-      artifact: hello-$VERSION.txt
+      artifact-source: hello-{world,you}.txt
+      artifact: hello-$VERSION-{world,you}.txt
       build: hello
-      run: echo "Hello, world from $GITHUB_SHA on $(date)!" >hello.txt
+      run: |
+        echo "Hello, world from $GITHUB_SHA on $(date)!" >hello-world.txt
+        echo "Hello, you from $GITHUB_SHA on $(date)!" >hello-you.txt
