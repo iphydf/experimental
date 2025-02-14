@@ -12,9 +12,13 @@ body:
       placeholder: "Here's our latest awesome release!"
     validations:
       required: true
-  - type: checkboxes
+  - type: dropdown
     id: production
     attributes:
       label: Release type
+      description: Whether this is a production release or a release candidate.
       options:
-        - label: Production release
+        - Release candidate
+        - Production release
+    validations:
+      required: true
