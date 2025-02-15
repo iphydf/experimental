@@ -22,7 +22,7 @@ jobs:
 
   prepare:
     name: Prepare
-    uses: iphydf/ci-tools/.github/workflows/deploy-prepare.yml@multi-artifact
+    uses: TokTok/ci-tools/.github/workflows/deploy-prepare.yml@master
 
   #############################################################
   # Deploy jobs
@@ -30,12 +30,21 @@ jobs:
 
   hello:
     name: Hello
-    uses: iphydf/ci-tools/.github/workflows/deploy-artifact.yml@multi-artifact
+    uses: TokTok/ci-tools/.github/workflows/deploy-artifact.yml@master
     with:
       project-name: Experimental
-      artifact-source: h*llo-{world,welt}.t*t
-      artifact-versioned: h*llo-$VERSION-{world,welt}.t*t
+      artifact-source:
+        h*llo-{world,welt}.t*t
+        listing.txt
+      artifact-versioned:
+        h*llo-$VERSION-{world,welt}.t*t
+        listing-$VERSION.txt
       build: hello
       run: |
+        echo "# File listing" >listing.txt
+
         echo "Hello, world from $GITHUB_SHA on $(date)!" >hello-world.txt
+        echo "hello-world.txt" >>listing.txt
+
         echo "Hallo, Welt von $GITHUB_SHA am $(date)!" >hallo-welt.txt
+        echo "hallo-welt.txt" >>listing.txt
