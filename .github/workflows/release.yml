@@ -2,7 +2,7 @@ name: release
 
 on:
   issues:
-    types: [opened, assigned]
+    types: [assigned]
 
 # Cancel old builds when pushing new commits.
 concurrency:
