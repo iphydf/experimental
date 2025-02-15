@@ -30,9 +30,9 @@ jobs:
 
   hello:
     name: Hello
+    needs: [prepare]
     uses: TokTok/ci-tools/.github/workflows/deploy-artifact.yml@master
     with:
-      project-name: Experimental
       artifact-source:
         h*llo-{world,welt}.t*t
         listing.txt
