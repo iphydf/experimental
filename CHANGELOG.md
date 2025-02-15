@@ -1,3 +1,21 @@
+<a name="v0.1.4"></a>
+
+## v0.1.4 (2025-02-15)
+
+### Release notes
+
+Another test release.
+
+#### Features
+
+- Add a file listing. ([d6c80578](https://github.com/TokTok/experimental/commit/d6c80578bc5b28c70ef21f6eb7c7ce02a35d542b))
+- Add a German hello world. ([cfce1719](https://github.com/TokTok/experimental/commit/cfce1719649d5c7fa9372ad54f31e008e1f8863f))
+- Add a "hello you" in addition to "hello world". ([82e584f6](https://github.com/TokTok/experimental/commit/82e584f63ec47a3c74c7ce660d65bb64a9db8ae6))
+
+#### Bug Fixes
+
+- Use artifact-versioned instead of artifact. ([1a73de6f](https://github.com/TokTok/experimental/commit/1a73de6fbc68f3eafc9596377846fb68a5dc432d))
+
 <a name="v0.1.3"></a>
 
 ## v0.1.3 (2025-02-14)
@@ -13,6 +31,7 @@ Here comes the release.
 <a name="v0.1.3-rc.1"></a>
 
 ## v0.1.3-rc.1 (2025-02-14)
+
 <a name="v0.1.2"></a>
 
 ## v0.1.2 (2025-02-14)
