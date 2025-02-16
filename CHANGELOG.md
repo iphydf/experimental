@@ -1,3 +1,20 @@
+<a name="v0.1.5-rc.1"></a>
+
+## v0.1.5-rc.1 (2025-02-16)
+
+### Release notes
+
+Another experimental release. Nothing done, still releasing. Release candidate first.
+
+#### Bug Fixes
+
+- Ignore ci-tools so we don't commit it during releases. ([ffd5e88b](https://github.com/TokTok/experimental/commit/ffd5e88bb79022bd9af79348522f82811263101c))
+- Don't trigger release workflow on issue opening. ([7a6e7d66](https://github.com/TokTok/experimental/commit/7a6e7d66ca5551f2440389a55b186ca33e49285f))
+
+#### Features
+
+- Add a cmake file. ([963496d7](https://github.com/TokTok/experimental/commit/963496d75878af06affd6578577277b4a6e534ed))
+
 <a name="v0.1.4"></a>
 
 ## v0.1.4 (2025-02-15)
