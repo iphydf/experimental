@@ -11,7 +11,7 @@ concurrency:
 jobs:
   release:
     name: Release
-    uses: iphydf/ci-tools/.github/workflows/release-deploy.yml@trigger-ci
+    uses: TokTok/ci-tools/.github/workflows/release-deploy.yml@master
     with:
       production: true
     secrets:
