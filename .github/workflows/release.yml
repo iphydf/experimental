@@ -14,3 +14,5 @@ jobs:
     uses: iphydf/ci-tools/.github/workflows/release-deploy.yml@trigger-ci
     with:
       production: true
+    secrets:
+      TOKEN_RELEASES: ${{ secrets.TOKEN_RELEASES }}
