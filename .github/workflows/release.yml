@@ -11,6 +11,6 @@ concurrency:
 jobs:
   release:
     name: Release
-    uses: TokTok/ci-tools/.github/workflows/release-deploy.yml@master
+    uses: iphydf/ci-tools/.github/workflows/release-deploy.yml@trigger-ci
     with:
       production: true
