@@ -12,3 +12,11 @@ concurrency:
 jobs:
   common:
     uses: TokTok/ci-tools/.github/workflows/common-ci.yml@master
+
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v2
+      - run: cmake -B _build
+      - run: cmake --build _build
+      - run: cmake --install _build
