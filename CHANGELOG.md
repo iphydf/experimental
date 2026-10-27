@@ -22,10 +22,6 @@ Test release candidate.
 
 Production release test.
 
-<a name="v0.1.5-rc.1"></a>
-
-## v0.1.5-rc.1 (2025-02-16)
-
 #### Bug Fixes
 
 - Ignore ci-tools so we don't commit it during releases. ([ffd5e88b](https://github.com/TokTok/experimental/commit/ffd5e88bb79022bd9af79348522f82811263101c))
@@ -64,10 +60,6 @@ Here comes the release.
 #### Bug Fixes
 
 - Use dropdown instead of checkbox for release type. ([1e8e7714](https://github.com/TokTok/experimental/commit/1e8e7714394fe492776f00ff876fdd8f9b9c2d98))
-
-<a name="v0.1.3-rc.1"></a>
-
-## v0.1.3-rc.1 (2025-02-14)
 
 <a name="v0.1.2"></a>
 

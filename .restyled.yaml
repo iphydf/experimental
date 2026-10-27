@@ -1,15 +1,23 @@
 ---
 restylers:
   - clang-format:
+      image: ghcr.io/toktok/restyler-clang-format:v18.1.8
       arguments: ["-style={BasedOnStyle: Google, ColumnLimit: 100}"]
       include:
         - "**/*.cc"
         - "**/*.cpp"
         - "**/*.h"
-  - prettier-markdown
-  - prettier-yaml
-  - reorder-python-imports
-  - shellharden
-  - shfmt
-  - yapf
-  - whitespace
+  - prettier-markdown:
+      image: ghcr.io/toktok/restyler-prettier:v3.9.10-6
+  - prettier-yaml:
+      image: ghcr.io/toktok/restyler-prettier:v3.9.10-6
+  - reorder-python-imports:
+      image: ghcr.io/toktok/restyler-reorder-python-imports:v3.19.0
+  - shellharden:
+      image: ghcr.io/toktok/restyler-shellharden:v4.3.2
+  - shfmt:
+      image: ghcr.io/toktok/restyler-shfmt:v3.14.1
+  - yapf:
+      image: ghcr.io/toktok/restyler-yapf:v0.43.0-1
+  - whitespace:
+      image: ghcr.io/toktok/restyler-whitespace:v0.2.0.5
